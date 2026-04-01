@@ -1,5 +1,3 @@
-import '../App.css'
- 
 export default function Header() {
   return (
     <div className="header flex justify-between max-w-7xl mx-auto">

@@ -1,10 +1,7 @@
-import '../../App.css'
-import mainDisplay from '../../assets/MGS-DarkBackground.png'
-
 export default function Dashboard() {
   return (
     <div className="relative flex justify-center items-center w-full h-screen overflow-hidden">
-        <img alt='Men in Agreement' src={mainDisplay} className='absolute w-auto h-screen object-cover z-0' />
+        <img alt='Men in Agreement' src='./assets/MGS-DarkBackground.png' className='absolute w-auto h-screen object-cover z-0' />
 
         <div className="absolute inset-0 bg-black/30 z-10" />
 

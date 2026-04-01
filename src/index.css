@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cabin:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #B4E700;
+  --background-color: #16171d;
+  --text-main-color: #fff;
+  --text-small-color: #737373;
+  --text-caption-color: #545454;
+}
+
+body {
+  background-color: #080808;
+  color: #fff;
+  font-style: "Source Sans 3", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 12;
+  width: 100%;
+}
