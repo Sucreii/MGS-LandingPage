@@ -14,9 +14,9 @@ export default function Offer() {
     <div className="md:flex justify-center items-center w-full overflow-hidden p-5 md:h-screen md:p-0">
         <div className="max-w-lg">
             <h5 className='text-[#B4E700]'>WHAT WE OFFER</h5>
-            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'> Start lean. </h1>
-            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'> Scale smart. </h1>
-            <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold'> We've got your back-office handled. </h1>
+            <h1 className='section-title'> Start lean. </h1>
+            <h1 className='section-title'> Scale smart. </h1>
+            <h1 className='section-title'> We've got your back-office handled. </h1>
         </div>
 
         <div className="max-w-xl">

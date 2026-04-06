@@ -19,7 +19,23 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  z-index: 12;
+  /* position: fixed; */
+  /* z-index: 12; */
   width: 100%;
+}
+
+.header-bg{
+  background: #000000;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0.61) 65%, rgba(0, 0, 0, 0) 91%);
+}
+
+button {
+  cursor: pointer;
+}
+
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold md:text-5xl lg:text-6xl;
+  }
 }

@@ -34,20 +34,21 @@ export default function Services() {
     ]
 
     return (
-        <div className="relative flex justify-center items-center w-full h-screen overflow-hidden">
-            <img alt='Men in Agreement' src='./assets/BoxBG.png' className='absolute w-screen h-auto object-cover z-0' />
+        <div className="relative flex justify-center items-center w-full md:h-screen overflow-hidden">
+            <img alt='Men in Agreement' src='./assets/BoxBG.png' className='absolute h-screen md:w-screen md:h-auto object-cover z-0' />
 
             <div className="absolute inset-0 bg-black/30 z-10" />
 
             <div className='relative flex flex-col md:flex-row md:items-end justify-center max-w-7xl z-20'>
                 <h1 className='
-                    flex 
-                    md:flex-1/3
-                    text-3xl 
-                    md:text-5xl
-                    lg:text-6xl
+                    section-title
+                    flex
+                    p-5
+                    text-center
                     font-bold
                     w-full
+                    md:text-left 
+                    md:flex-1/3
               '>
                     We handle the Tech, so you don’t have to
                 </h1>
