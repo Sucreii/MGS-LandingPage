@@ -1,6 +1,7 @@
 
 
 export default function Offer() {
+    
     const offers = [
         { id: '01', title: 'Staff Leasing', description: 'Partner with us for recruitment, salaries, and HR admin, ensuring smooth operations for your project-specific or temporary staff.' },
         { id: '02', title: 'Outsourcing', description: 'Let us handle specific tasks, freeing you to focus on core activities for maximum efficiency.' },

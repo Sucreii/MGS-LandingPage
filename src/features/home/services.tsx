@@ -1,4 +1,13 @@
-export default function Services() {
+import { useEffect } from 'react';
+
+export default function Services({ onReady }: { onReady: () => void }) {
+    
+    useEffect(() => {
+        const img = new Image();
+        img.src = "/assets/BoxBG.png";
+        img.onload = onReady;
+    }, [onReady]);
+
     const services = [
         {
             icon: "./assets/CardIcon.png",
