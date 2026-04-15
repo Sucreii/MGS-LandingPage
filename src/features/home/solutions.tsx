@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { FadeInUp } from '../../utils/animation';
 
 export default function Solutions({ onReady }: { onReady: () => void }) {
 
@@ -28,19 +29,19 @@ export default function Solutions({ onReady }: { onReady: () => void }) {
     return (
         <div className="flex flex-col gap-10 justify-center items-center overflow-hidden p-5 md:h-screen md:p-0">
             <div className="max-w-3xl text-center">
-                <h1 className='section-title font-bold'>
+                <FadeInUp className='section-title font-bold'>
                     See our solutions in action, visit Our site offices Today
-                </h1>
-                <h5 className='text-lg font-semibold text-[#737373] pt-3'>
+                </FadeInUp>
+                <FadeInUp className='text-lg font-semibold text-[#737373] pt-3'>
                     Get your work done in the comfort of our space
-                </h5>
+                </FadeInUp>
 
 
             </div>
             <div className="flex flex-col md:flex-row gap-5 max-w-7xl w-full">
                 {
                     offices.map((office, index) => (
-                        <div
+                        <FadeInUp
                             key={index}
                             className="w-full rounded-2xl flex flex-col justify-end overflow-hidden relative h-120 p-2 bg-gray-900"
                         >
@@ -54,7 +55,7 @@ export default function Solutions({ onReady }: { onReady: () => void }) {
                                 <h2 className="text-lg text-white font-bold">{office.blgName}</h2>
                                 <h2 className="text-sm text-gray-500">{office.location}</h2>
                             </div>
-                        </div>
+                        </FadeInUp>
                     ))
                 }
             </div>

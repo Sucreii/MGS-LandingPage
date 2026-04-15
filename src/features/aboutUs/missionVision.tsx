@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import { FadeInUp } from '../../utils/animation';
 
 export default function MissionVision({ onReady }: { onReady: () => void }) {
 
@@ -37,7 +37,7 @@ export default function MissionVision({ onReady }: { onReady: () => void }) {
 
 
     return (
-        <div className="flex flex-col gap-10 justify-center items-center overflow-hidden py-50 p-5">
+        <FadeInUp className="flex flex-col gap-10 justify-center items-center overflow-hidden py-50 p-5">
             <div className="max-w-5xl flex flex-col gap-10 text-center">
                 <h1 className='section-title font-bold'>
                     Your registered partner for business consultancy and management in the Philippines
@@ -70,6 +70,6 @@ export default function MissionVision({ onReady }: { onReady: () => void }) {
                     ))
                 }
             </div>
-        </div>
+        </FadeInUp>
     )
 }

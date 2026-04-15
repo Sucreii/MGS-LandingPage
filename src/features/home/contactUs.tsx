@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
+import { FadeInUp } from '../../utils/animation';
 import ContactUsModal from "../../components/contactModal";
 
 export default function ContactUsHome() {
@@ -10,7 +11,7 @@ export default function ContactUsHome() {
     }
 
     return (
-        <div className="flex flex-col gap-10 justify-center items-center overflow-hidden p-5 md:h-screen md:p-0">
+        <FadeInUp className="flex flex-col gap-10 justify-center items-center overflow-hidden p-5 md:h-screen md:p-0">
             <div className="max-w-3xl text-center">
                 <h1
                     className="
@@ -48,6 +49,6 @@ export default function ContactUsHome() {
                 <FiArrowUpRight className="text-4xl text-white ml-2" />
             </button>
             <ContactUsModal isOpen={openDialog} onClose={() => setOpenDialog(false)} />
-        </div>
+        </FadeInUp>
     );
 }

@@ -1,7 +1,7 @@
-
+import { FadeInUp } from "../../utils/animation"
 
 export default function Offer() {
-    
+
     const offers = [
         { id: '01', title: 'Staff Leasing', description: 'Partner with us for recruitment, salaries, and HR admin, ensuring smooth operations for your project-specific or temporary staff.' },
         { id: '02', title: 'Outsourcing', description: 'Let us handle specific tasks, freeing you to focus on core activities for maximum efficiency.' },
@@ -11,25 +11,25 @@ export default function Offer() {
         { id: '06', title: 'Business Registration', description: 'Register your business to ensure exclusivity in your company structure—various options available.' },
     ]
 
-  return (
-    <div className="md:flex justify-center items-center w-full overflow-hidden p-5 md:h-screen md:p-0">
-        <div className="max-w-lg">
-            <h5 className='text-[#B4E700]'>WHAT WE OFFER</h5>
-            <h1 className='section-title'> Start lean. </h1>
-            <h1 className='section-title'> Scale smart. </h1>
-            <h1 className='section-title'> We've got your back-office handled. </h1>
-        </div>
+    return (
+        <FadeInUp className="md:flex justify-center items-center w-full overflow-hidden p-5 md:h-screen md:p-0">
+            <div className="max-w-lg">
+                <h5 className='text-[#B4E700]'>WHAT WE OFFER</h5>
+                <h1 className='section-title'> Start lean. </h1>
+                <h1 className='section-title'> Scale smart. </h1>
+                <h1 className='section-title'> We've got your back-office handled. </h1>
+            </div>
 
-        <div className="max-w-xl">
-            {
-                offers.map((item, index) => (
-                    <div key={index} className='relative pb-5 block-full'>
-                        <h1 className='font-semibold text-lg'> {item.title} </h1>
-                        <h5 className='font-semibold text-[#737373]'> {item.description} </h5>
-                    </div>
-                ))
-            }
-        </div>
-    </div>
-  )
+            <div className="max-w-xl">
+                {
+                    offers.map((item, index) => (
+                        <div key={index} className='relative pb-5 block-full'>
+                            <h1 className='font-semibold text-lg'> {item.title} </h1>
+                            <h5 className='font-semibold text-[#737373]'> {item.description} </h5>
+                        </div>
+                    ))
+                }
+            </div>
+        </FadeInUp>
+    )
 }

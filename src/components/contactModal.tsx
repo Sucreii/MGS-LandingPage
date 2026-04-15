@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { FadeInUpDialog } from '../utils/animation';
 
 interface ContactUsModalProps {
   isOpen: boolean;
@@ -40,12 +41,12 @@ const ContactUsModal: React.FC<ContactUsModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <dialog
+    <FadeInUpDialog
       ref={dialogRef}
       onClose={handleClickClose}
-      className="backdrop:bg-slate-900/40 backdrop:backdrop-blur-sm bg-transparent p-0 m-auto focus:outline-none"
+      className="backdrop:bg-slate-900/40 backdrop:backdrop-blur-sm bg-transparent p-0 w-full mt-auto md:m-auto md:w-auto max-w-screen md:max-w-250 focus:outline-none "
     >
-      <div className="contact-us-dialog animate-in fade-in zoom-in duration-200">
+      <div className="contact-us-dialog">
         <img src="/assets/ContactUsBG.png" className='contact-us-img' alt="Contact Us BG" />
         <div className="contact-us-content">
           <button
@@ -54,14 +55,15 @@ const ContactUsModal: React.FC<ContactUsModalProps> = ({ isOpen, onClose }) => {
           >
             <IoCloseCircleOutline />
           </button>
-          <div className="flex flex-row gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <div className="flex flex-col justify-end">
+              <div className="h-20 md:h-0"></div>
               <h2 className="text-white uppercase font-extrabold">ONE SAN MIGUEL AVE.</h2>
-              <h2 className="text-white/50 uppercase">(02) 8556 3078 / (02) 5310 4096</h2>\\
+              <h2 className="text-white/50 uppercase">(02) 8556 3078 / (02) 5310 4096</h2>
               <h2 className="text-white uppercase font-extrabold">ONE CORPORATE CENTER</h2>
               <h2 className="text-white/50 uppercase">(02) 5310 1741</h2>
             </div>
-            <div className="p-5">
+            <div className="md:p-5">
               <div className='rounded-lg border border-[#202020] bg-[#121212] px-6 py-8 md:p-10 justify-between'>
                 <form className="max-w-xl w-full text-white space-y-12">
                   {formFields.map((field, index) => (
@@ -83,7 +85,7 @@ const ContactUsModal: React.FC<ContactUsModalProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </dialog>,
+    </FadeInUpDialog>,
     document.body
   );
 };

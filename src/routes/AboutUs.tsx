@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Footer from '../components/footer'
 import Header from '../components/header'
 import MissionVision from '../features/aboutUs/missionVision'
+import Loading from '../components/loading';
 
 export default function AboutUs() {
     const [loadedCount, setLoadedCount] = useState(0);
@@ -29,6 +30,11 @@ export default function AboutUs() {
 
     return (
         <div className="App">
+
+            {!isAllLoaded && (
+                <Loading />
+            )}
+
             <section>
                 <Header />
             </section>
