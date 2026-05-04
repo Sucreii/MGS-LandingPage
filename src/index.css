@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cabin:ital,wght@0,400..700;1,400..700&family=Lexend:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #B4E700;
+  --background-color: #16171d;
+  --text-main-color: #fff;
+  --text-small-color: #737373;
+  --text-caption-color: #545454;
+}
+
+body {
+  background-color: #080808;
+  color: #fff;
+  font-style: "Source Sans 3", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* position: fixed; */
+  /* z-index: 12; */
+  width: 100%;
+}
+
+.header-bg{
+  background: #000000;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 38%, rgba(0, 0, 0, 0.61) 65%, rgba(0, 0, 0, 0) 91%);
+}
+
+button {
+  cursor: pointer;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  background: 
+    linear-gradient(45deg,#B4E700 50%,#0000 0),
+    linear-gradient(45deg,#0000 50%,#B4E700 0),
+    linear-gradient(-45deg,#ffffff 50%,#0000 0),
+    linear-gradient(-45deg,#0000 50%,#ffffff 0),
+    linear-gradient(#8f8f8f 0 0);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: l18 1.5s infinite;
+}
+@keyframes l18{
+  0%   {background-position:50% 50%,50% 50%,50%  50% ,50% 50%,50% 50%}
+  25%  {background-position:0  100%,100%  0,50%  50% ,50% 50%,50% 50%}
+  50%  {background-position:0  100%,100%  0,100% 100%,0   0  ,50% 50%}
+  75%  {background-position:50% 50%,50% 50%,100% 100%,0   0  ,50% 50%}
+  100% {background-position:50% 50%,50% 50%,50%  50% ,50% 50%,50% 50%}
+}
+
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold md:text-5xl lg:text-6xl;
+  }
+
+  .contact-us-dialog {
+    @apply  bg-black w-screen md:w-[95vw] h-[95vh] rounded-2xl shadow-xl border border-slate-800 overflow-y-auto md:overflow-hidden md:max-w-250 max-h-150 relative;
+  }
+
+  .contact-us-img {
+    @apply absolute inset-0 w-full h-auto md:h-full object-cover transition-opacity duration-700 opacity-100;
+  }
+
+  .contact-us-content {
+    @apply relative z-10 w-full h-full p-8;
+  }
+
+  .contact-us-content div, .contact-us-content div div {
+    @apply w-full h-full;
+  }
+}
